@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offset Interactive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Normalization -->
+    <!-- <link rel="stylesheet" href="vendors/css/normalize.css" class="css"> -->
+    <!-- grid -->
+    <!-- <link rel="stylesheet" href="vendors/css/grid.css" class="css"> -->
+    <!-- style -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" class="css">
+    <!-- responsive -->
+    <!-- <link rel="stylesheet" href="resources/css/responsive.css" class="css"> -->
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <div class="row" id="home">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/logo1.png' %}" alt="Offset-interactive-logo" class="logo" >
+                </a>
+                <p class= "logof"><a href="{% url 'home' %}">Offset Interactive</a></p>
+                <ul class="main-nav">
+                    <li class = "active"><a href="{% url 'home' %}">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#footer">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="hero-text-box">
+                <h1>Hey! You wish to print something today?</h1>
+                <a href="{% url 'AC' %}" class ="btn btn-hero">Get Started!</a>
+            </div>
+        </div>
+    </header>
+    <!-- End header section -->
+
+    <!-- Start About -->
+    <section class = "about" id ="about">
+        <div class="row">
+            <h2>How Can Offset Help You?</h2>
+            <p>Offset helps you find the right product within your budget without making you go through the hassles of collecting quotations,
+                 vetting your vendors or worrying about the quality of the product. </p>
+        </div>
+    </section>
+    <section class="about2 clearfix">
+        <h2>Offset Helps you achieve...</h2>
+        <div class="block"></div>
+            <div class="row1 head col span_1_of_3">
+                <h3> X time of your employee</h3>
+                <p>On an average, a supply chain manager has to worry about packaging __ hours a month, with Offset, you leave all the hassle to us.
+                </p>
+            </div>
+            <div class="row2 head col span_1_of_3">
+                <h3>  Y cost of product purchasing</h3>
+                <p> You don’t need to pay more than what you should. With our bidding platform, Offset ensures the highest quality within the best available rate in the market. 
+
+                </p>
+            </div>
+            <div class="row3 head col span_1_of_3">
+                <h3> Z% efficiency</h3>
+                <p>With our inventory management system and warehouse facilities, it’s time for your business to get more efficient everyday. 
+                </p>
+            </div>
+        
+        
+    </section>
+    <!-- End about  -->
+    <!-- services start -->
+    <section class="services clearfix" id = "services" >
+        <h2>Services We Provide</h2>
+        <div class="col span_1_of_4 box">
+            <img src="{% static 'images/auto-consult.jpeg' %}" alt="Automated Consultancy">
+            <div class="content">
+            <h4>Automated Consultancy</h4>
+            <p>We can help you decide the right product for your business within minutes. Click here to receive our automated consultancy.</p>
+            </div>
+        </div>
+        <div class="col span_1_of_4 box">
+            <img src="{% static 'images/inventory.jpeg' %}" alt="Inventory Management">
+            <div class="content">
+            <h4>Inventory Management</h4>
+            <p>We take care of your inventory for you. We understand keeping track can be hasslesome, utilize our dashboard to ease the process or integrate your sales tracking api to update automatically!
+            </p>
+            </div>
+        </div>
+        <div class="col span_1_of_4 box">
+            <img src="{% static 'images/warehouse.jpeg' %}" alt="Warehouse Facilities">
+            <div class="content">
+            <h4>Warehouse Facilities</h4>
+            <p>Not enough room to keep your products? We hear you. You can take help with our warehouse facilities to store your ready goods, and use it whenever you want! 
+            </p>
+            </div>
+        </div>
+        <div class="col span_1_of_4 box">
+            <img src="{% static 'images/package.jpeg' %}" alt="Luxurious packaging">
+            <div class="content">
+            <h4>Luxurious Packaging</h4>
+            <p>Want to stand out from the crowd? Our expert consultants and designers will personally guide you to find exactly what you’re looking for. 
+            </p>
+        </div>
+        </div>
+    </section>
+    <!-- services end -->
+
+    <!-- testimonial starts -->
+    <section class="test clearfix">
+        <h2>Testimonials</h2>
+        <div class="container">
+            <div class="carousel">
+              <div class="slider">
+                <section><pre>Anika</pre></section>
+                <section>Tabassum</section>
+                <section>Era</section>
+                <section>What</section>
+                </div>
+              <div class="controls">
+                  <span class="arrow left"><i class="fas fa-angle-left"></i></span>
+                  <span class="arrow right"><i class="fas fa-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog clearfix" id = "blog" >
+        <h2>Blog</h2>
+        <a href="{% url 'blog' %}" class ="btn btn-blog">Go to the blog-panel</a>
+
+    </section>
+    <!-- final hook -->
+    <section class="clearfix final">
+        <h3>You don’t get a second chance to build your first impression. It’s your time to position yourself better than your competitors.
+        </h3>
+        <a href="{% url 'popup' %}" class ="btn btn-final">Learn How</a>
+    </section>
+    
+    <!-- Footer starts -->
+    <footer class="footer" id = "footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Phone: +8801xxxxxxxxx</li>
+                        <li>Email: offsetinteractive@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="{% url 'AC' %}">Automated Consultancy</a></li>
+                        <li>Inventory Management</li>
+                        <li>Warehouse Facility</li>
+                        <li>Luxurious Packaging</li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Blog</h4>
+                    <ul>
+                        <li>
+                            <a href="{% url 'blog' %}">Check Blogs</a>
+                        </li>
+                    </ul>
+                   
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href=""><i class = 'fab fa-facebook-f'></i></a>
+                        <a href=""><i class = 'fab fa-twitter'></i></a>
+                        <a href=""><i class = 'fab fa-instagram'></i></a>
+                        <a href=""><i class = 'fab fa-linkedin-in'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>    

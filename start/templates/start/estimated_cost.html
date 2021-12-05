@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offset Interactive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Normalization -->
+    <link rel="stylesheet" href="vendors/css/normalize.css" class="css">
+    <!-- grid -->
+    <link rel="stylesheet" href="vendors/css/grid.css" class="css">
+    <!-- style -->
+    <link rel="stylesheet" href="{% static 'css/cost.css' %}" class="css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="resources/css/responsive.css" class="css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <nav>
+            <div class="row">
+                <a href="{% url 'AC' %}">
+                    <img src="{% static 'images/logo1.png' %}" alt="Offset-interactive-logo" class="logo" >
+                </a>
+                <p class= "logof"><a href="{% url 'AC' %}">Offset Interactive</a></p>
+                <!-- <ul class="main-nav">
+                    <li class = "active"><a href="#">home</a></li>
+                    <li><a href="{% url 'home' %}">about</a></li>
+                    <li><a href="{% url 'home' %}">services</a></li>
+                    <li><a href="{% url 'home' %}">blog</a></li>
+                    <li><a href="{% url 'home' %}">contact</a></li>
+                </ul> -->
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <div class="step">
+                    <div class="form-group">
+                        <h2>Estimated - Cost: {{s1}} to {{s2}} BDT</h2>
+                        <div class="buff"></div>
+                        <div class="buff"></div>
+                        <a href="{% url 'popup' %}" class = "btn btn-banner">Put up for Bidding</a>
+                        <div class="buff"></div>
+                        <a href="{% url 'home' %}" class = "btn btn-banner">Opss! Out of my Budget</a>
+                        <div class="buff"></div>
+                        <a href="{% url 'home' %}" class = "btn btn-banner">Will look for vendors myself</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="container">
+            <div class="carousel">
+              <div class="slider">
+                <section>
+                    <div class="cost" >
+                        <h2>Estimated - Cost: {{s1}} to {{s2}} BDT</h2>
+                        <a href="{% url 'popup' %}" class = "btn btn-banner">Put up for Bidding</a>
+                        <div class="buff"></div>
+                        <a href="{% url 'home' %}" class = "btn btn-banner">Opss! Out of my Budget</a>
+                        <div class="buff"></div>
+                        <a href="{% url 'home' %}" class = "btn btn-banner">Will look for vendors myself</a>
+                </section>
+                </div> -->
+              <!-- <div class="controls">
+                <span class="arrow left"><i class="fas fa-angle-left"></i></span>
+                <span class="arrow right"><i class="fas fa-angle-right"></i></span>
+              </div> -->
+            <!-- </div>
+          </div> -->
+    </header>
+
+    

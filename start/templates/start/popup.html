@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offset Interactive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Normalization -->
+    <link rel="stylesheet" href="vendors/css/normalize.css" class="css">
+    <!-- grid -->
+    <link rel="stylesheet" href="vendors/css/grid.css" class="css">
+    <!-- style -->
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}" class="css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="resources/css/responsive.css" class="css">
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <div class="text">Thank you for putting up for bidding through Offset Interactive. We usually take 48 hours to process a bid. We will make sure you are taken care of every step of the way! For that, we need to be able to contact you.</div>
+        
+        <form action="{% url 'bid' %}"method="POST">
+            {% csrf_token %}
+            <div class="data">
+                <label> May we have your mail?</label>
+                <input type="email" name="email" id="email">
+                <label>
+            </div>
+            <div class="data">
+                <label> Share your phone number too!</label>
+                <input type="text" name="phone" id="phone">
+                <label>
+            </div>
+            <div class="btn">
+                <div class="inner">
+                    <button type = 'submit'>Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>

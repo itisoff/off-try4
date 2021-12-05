@@ -1,0 +1,532 @@
+/*Vendor*/
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
+}
+
+.span_4_of_4 {
+    width: 100%; 
+}
+
+.span_3_of_4 {
+    width: 74.6%; 
+}
+
+.span_2_of_4 {
+    width: 49.2%; 
+}
+
+.span_1_of_4 {
+    width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+    .span_4_of_4 {
+        width: 100%; 
+    }
+    .span_3_of_4 {
+        width: 100%; 
+    }
+    .span_2_of_4 {
+        width: 100%; 
+    }
+    .span_1_of_4 {
+        width: 100%; 
+    }
+}
+/*........................................................................................*/
+/*........................................................................................*/
+/*........................................................................................*/
+
+/*...............Base Setup.....................*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3rem;
+    background: rgba(89, 52, 27,0.9);
+} */
+/* 
+ul li {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both; /*if there is any float it clears. in section all is left floated*/
+    /* height: 0;
+    visibility: hidden;} */
+/*Headings*/
+/* .row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+.btn:link,
+.btn:visited,
+.btn{
+    background: #333;
+    border-bottom: .3rem solid #000;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.2rem 5.5rem;
+    border-radius: .4rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+}
+
+section{
+    padding: 5rem 0;
+    text-align: center;
+}
+h1{
+    color: #fff;
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    /* color: #fff; */
+/* } */
+/* h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background:rgba(31, 105, 97,0.7) ;
+    width: 8.6rem;
+    margin: auto;
+    margin-top: 3rem;
+}  */
+/*................................. Header........................ */
+
+header{
+    background: url(../images/nw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+
+}
+/* .logo{
+    height: 7rem;
+    width: 7rem;
+    margin-top: 2.5rem;
+    float: left;
+}
+.logof{
+float: left;
+margin-top: 4rem;
+font-size:2.2rem;
+font-weight: 400;
+}
+.logof a{
+text-decoration: none;
+color: rgba(255, 255, 255,1);
+} */
+/*Main Navigation*/
+
+/* .main-nav{
+    float: right;
+    margin-top: 4rem;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(100, 58, 121, 0);
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: .3s;
+} */
+
+/* .main-nav li:hover a:link,
+.main-nav li:hover a:visited{
+    background:rgba(89, 52, 27,0.9);
+}
+.active{
+    background:rgba(89, 52, 27,0.9);
+    border-radius: .3rem;
+}
+.hero-text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.btn-hero:link,
+.btn-hero:visited{
+    background: #2b9ae8;
+    border-color: #072940;
+} */
+/*................. banner................. */
+
+/* .container{
+    padding-top: 11rem;
+    margin:0 auto;
+    width: 80%;
+  }
+  
+  .carousel{
+    border: 2px solid rgba(89, 52, 27,0.9);
+    height: 60rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider{
+    height: 100%;
+    display: flex;
+    width: 400%;
+    border: 2px solid rgba(89, 52, 27,0.9);
+    background: url('../images/ban.jpg');
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+  
+  .slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  /* .controls .arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .arrow.left{
+    left: 1rem;
+    font-size: 3rem;
+    color:rgba(89, 52, 27,1);
+  }
+  
+  .arrow.right{
+    right: 1rem;
+    font-size: 3rem;
+    color:rgba(89, 52, 27,1);
+  } */
+
+  /* ..........................inputs................................ */
+  /* .buff{
+      width:3rem;
+  }
+  .input-group-text{
+      font-size: 2rem;
+      
+  }
+  input{
+      outline: transparent;
+      background: #9B7A4D;
+      padding: 1rem;
+      border-radius: 3px;
+      width:25rem;
+      border: none;    
+  }
+  input:focus::placeholder{
+    color: transparent;
+}
+  input::placeholder{
+      color: #340100;
+      transition: .3s ease;
+      font-size: 1.5rem;
+  }
+ 
+  select{
+      outline: transparent;
+      background: #9B7A4D;
+      color: #340100;
+      padding: 1rem;
+      border-radius: 3px;
+      width:25rem;
+      border: none;   
+      appearance: none;
+  }
+  .custom-select{
+      position: relative;
+  }
+
+  .custom-arrow{
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      background: rgba(52, 1, 0, 0.5);
+      height: 100%; */
+      /* width: 4rem;
+      pointer-events: none;
+      padding: 1.1rem;
+      font-size: 1.5rem;
+      color:rgba(52, 1, 0, 1);
+  }
+option{
+    font-size: 1.6rem;
+}
+  option:hover{
+      outline: none;
+      background: #9B7A4D;
+  }
+  .btn-banner{
+      background: rgba(52, 1, 0, 0.5);
+      color:#FBED8B;
+  }
+    */
+  
+  /* .custom-arrow::before,
+  .custom-arrow::after{
+    --size: 0.625;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.custom-arrow::before{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: var(--size) solid rgba(52, 1, 0, 1);
+    top: 40%;
+}
+.custom-arrow::after{
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-top: var(--size) solid rgba(52, 1, 0, 1);
+    top: 60%;
+} */
+
+/* Style the form */
+
+
+  .buffer{
+      height: 30px;
+  }
+  .buff{
+      height: 20px;
+  }
+
+
+  /* The container must be positioned relative: */
+.custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: rgba(31, 53, 75, 0.808);
+    border-radius: 5px;
+
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: rgba(31, 53, 75, 0.808);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .label{
+      color:#aaaaaa
+  }
+  .span{
+      font-size: 22px;
+  }
+
+  .btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat";
+  }
+  section {
+    position:absolute;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+  }
+  .container {
+    max-width: 700px;
+    width: 90%;
+    height: 70vh;
+    padding: 40px;
+    box-shadow: 0px 0px 20px #00000020;
+    border-radius: 8px;
+    background-color: white;
+  }
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form-group input {
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.418);
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+  
+  button.next-btn,
+  button.previous-btn,
+  button.submit-btn {
+    float: right;
+    /* margin-top: 20px; */
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(180, 220, 255);
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+    /* text-align: right; */
+  }
+  button.previous-btn {
+    float: left;
+  }
+  button.submit-btn {
+    background-color: aquamarine;
+  }
+
+  .position{
+      margin-top: 100px;
+      margin-right: 5px;
+  }
+
+.logo{
+    height: 6rem;
+    width: 6rem;
+    margin-top: 1.5rem;
+    float: left;
+    cursor: pointer;
+}
+.logof{
+float: left;
+margin-top: 3rem;
+font-size:2.2rem;
+font-weight: 400;
+cursor: pointer;
+}
+.logof a{
+text-decoration: none;
+color: rgba(255, 255, 255,1);
+}
+
+nav{
+  position:absolute;
+  z-index: 100;
+}
